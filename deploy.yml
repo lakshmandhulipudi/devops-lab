@@ -1,3 +1,4 @@
+
 ---
 - name: Deploy the Greeting application
   hosts: tradelive
@@ -46,6 +47,7 @@
 
   handlers:
     - name: Restart Greeting
-           systemd:
+      systemd:
         name: greeting.service
         state: restarted
+
